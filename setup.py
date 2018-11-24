@@ -14,11 +14,17 @@ from setuptools import find_packages, setup, Command
 # Package meta-data.
 NAME = 'lccnorm'
 DESCRIPTION = 'Normalize Library of Congress Control Numbers.'
-URL = 'https://github.com/me/lccnorm-py'
+URL = 'https://github.com/seanredmond/lccnorm-py'
 EMAIL = 'github-smr@sneakemail.com'
 AUTHOR = 'Sean Redmond'
-REQUIRES_PYTHON = '>=3.6.0'
+REQUIRES_PYTHON = '>=2.6.0'
 VERSION = None
+
+# What packages are required for this module to be executed?
+REQUIRED = []
+
+# What packages are optional?
+EXTRAS = {}
 
 # The rest you shouldn't have to touch too much :)
 # ------------------------------------------------
@@ -92,7 +98,7 @@ setup(
     author_email=EMAIL,
     python_requires=REQUIRES_PYTHON,
     url=URL,
-    py_modules=['lccnorm'],
+    packages=find_packages(exclude=('tests',)),
 
     install_requires=REQUIRED,
     extras_require=EXTRAS,
