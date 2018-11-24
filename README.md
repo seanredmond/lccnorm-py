@@ -1,8 +1,11 @@
 # Lccnorm
 
+[![PyPi Version](https://badge.fury.io/py/lccnorm.svg)][pypi]
 [![Build Status](http://img.shields.io/travis/seanredmond/lccnorm-py.svg)][travis]
 
 [travis]: http://travis-ci.org/seanredmond/lccnorm-py
+[pypi]: https://pypi.org/project/lccnorm/
+
 
 ## Installation
 
