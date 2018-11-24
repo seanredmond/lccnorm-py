@@ -1,5 +1,8 @@
 # Lccnorm
 
+[![Build Status](http://img.shields.io/travis/seanredmond/lccnorm-py.svg)][travis]
+[travis]: http://travis-ci.org/seanredmond/lccnorm-py
+
 ## Installation
 
     pip install lccnorm
