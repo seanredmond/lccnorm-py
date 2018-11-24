@@ -25,12 +25,12 @@ def test_detect_error():
     # Non-numeric character to the right of the hyphen
     with pytest.raises(lccnorm.lccnorm.InvalidLccnError):
         lccnorm.normalize('n78-890351a')
-    
+
 
 def test_valid():
     # 8 digits
     assert lccnorm.is_valid('79139101')is True
-    
+
     # 1 alphabetic character + 8 digits
     assert lccnorm.is_valid('n78890351')is True
 
@@ -45,7 +45,7 @@ def test_valid():
 
     # 1 alphabetic character + 2 digits + 8 digits
     assert lccnorm.is_valid('a2002003456')is True
-      
+
     # 2 alphabetic characters + 10 digits
     assert lccnorm.is_valid('mm2002084896')is True
 
@@ -53,18 +53,18 @@ def test_valid():
 def test_invalid():
     # not enough characters
     assert lccnorm.is_valid('7913910')is False
-    
+
     # 1 character prefix, but not a letter
     assert lccnorm.is_valid('078890351')is False
-    
+
     # 2 character prefix, mixed letter and number
     assert lccnorm.is_valid('a078890351')is False
-    
+
     # 3 character prefix, doesn't start with a letter
     assert lccnorm.is_valid('4gr14000102')is False
-    
+
     # 3 character prefix, 2nd & 3rd characters mixed letter and number
     assert lccnorm.is_valid('ag414000102')is False
-    
+
     # 1 alphabetic character + 11 digits
-    assert lccnorm.is_valid('m02002084896')is False    
+    assert lccnorm.is_valid('m02002084896')is False
