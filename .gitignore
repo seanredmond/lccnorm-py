@@ -30,6 +30,8 @@ var/
 *.manifest
 *.spec
 
+
+
 # Installer logs
 pip-log.txt
 pip-delete-this-directory.txt
@@ -89,3 +91,6 @@ ENV/
 .ropeproject
 *.npy
 *.pkl
+
+.pytest_cache
+*~
